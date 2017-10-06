@@ -41,10 +41,14 @@ public class MainActivity extends AppCompatActivity {
 
         mBundle = new Bundle();
         mBundle.putString("parametro2", mMessage2);
+        //se agrega un string con una key "parametro2" y el string contenido en mMensaje2
         mFragment2 = new Fragment2();
         mFragment2.setArguments(mBundle);
+        // estos son arguments que van a Fragment2 contenidos dentro de mBundle
         mFragmentTransaction = mFragmentManager.beginTransaction();
         mFragmentTransaction.replace(R.id.frame2, mFragment2).addToBackStack("frame2").commit();
+        //remplaza el contenido dentro de frame2 con mFragment2, guardando el fragment en el stack de vistas
+        // con el nombre frame2, habilitando la posibilidad de volver a este fragment cuando se presiona el boton de volver en el telefono
 
 
         mBundle = new Bundle();
